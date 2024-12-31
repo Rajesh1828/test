@@ -1,0 +1,62 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(198, 97, 97);
+    background-color: rgb(174, 231, 231);
+  }
+  
+  .portfolio-section {
+    background: url('') no-repeat center center/cover; /* Add your background image */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .content {
+    max-width: 800px;
+  }
+  
+ .portfolio-section  content h1 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  
+  strong {
+    color: #ffcc00;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  

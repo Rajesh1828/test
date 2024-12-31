@@ -1,0 +1,87 @@
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .menu-btn {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    visibility: hidden;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    padding-right: 20px;
+  }
+
+  .menu.open {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  .menu i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .menu ul {
+    list-style: none;
+    text-align: right;
+  }
+
+  .menu ul li {
+    margin: 15px 0;
+  }
+
+  .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .menu ul li a:hover {
+    color: #f4a261;
+    background-color: yellow;
+  }
