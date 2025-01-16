@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    background-image: url('/images/1.png'); /* Replace with your image path */
+    background-image: url('/images/oc.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -51,3 +51,36 @@
         font-size: 1rem;
     }
 }
+
+.responsive-container-21 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+  }
+  
+  .responsive-image-21 {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto;
+  }
+  
+  .responsive-heading-21 {
+    font-size: 24px; /* Adjust heading size */
+    color: #333; /* Adjust color */
+    margin-left: 20px; /* Space between image and text */
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .responsive-container-21 {
+      flex-direction: column;
+      align-items: center; /* Center items for smaller screens */
+    }
+  
+    .responsive-heading-21 {
+      margin-left: 0; /* Remove extra margin for smaller screens */
+      margin-top: 10px; /* Add some space above the heading */
+      text-align: center; /* Center align text for smaller screens */
+    }
+  }
+  

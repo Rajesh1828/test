@@ -1,62 +1,209 @@
 /* styles.css */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: rgb(198, 97, 97);
-    background-color: rgb(174, 231, 231);
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Optional: Background for better contrast */
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Ensures the image scales nicely */
+}
+
+/* General Styles */
+.circle-section {
+  padding: 50px;
+  background-image: url("/images/pic07.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.circle-content {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.portfolio-heading {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff; /* High contrast */
+}
+
+.description {
+  font-size: 3.0rem;
+  color: #cccccc; /* Improved readability */
+  margin-bottom: 40px;
+}
+
+.circle-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping */
+  justify-content: center; /* Centers circles */
+  gap: 20px; /* Space between circles */
+}
+
+.circle-item {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #0c0d0e;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  transition-delay: 0.1s; /* Base delay for initial animation */
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  .portfolio-section {
-    background: url('') no-repeat center center/cover; /* Add your background image */
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
+  100% {
+    opacity: 1;
   }
-  
-  .content {
-    max-width: 800px;
+}
+
+.circle-item:hover {
+  background-color: #d4b125;
+  transform: scale(1.1);
+  color: #0c0d0e;
+}
+
+.see-all {
+  background-color: #2f2e25;
+}
+
+.see-all:hover {
+  background-color: #7e6c1e;
+}
+
+/* Arrow mark for mobile view */
+.circle-item::after {
+  content: ''; /* Unicode arrow character */
+  margin-left: 10px; /* Space between text and arrow */
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transition-delay: 0.2s; /* Add delay for arrow appearing */
+}
+
+/* Add animation delay for each circle */
+.circle-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.circle-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.circle-item:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.circle-item:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.circle-item:nth-child(5) {
+  animation-delay: 1.3s;
+}
+
+/* Add more if you have more circle items */
+
+/* Responsive Styles */
+@media (max-width: 992px) { /* Tablets and smaller desktops */
+  .portfolio-heading {
+    font-size: 2rem;
   }
-  
- .portfolio-section  content h1 {
-    font-size: 6rem;
-    margin-bottom: 1rem;
+
+  .description {
+    font-size: 2rem;
   }
-  
-  p {
-    font-size: 1.2rem;
-    line-height: 1.8;
+
+  .circle-item {
+    width: 150px;
+    height: 150px;
+    font-size: 0.9rem;
   }
-  
-  span {
-    font-weight: bold;
-    color: #ffcc00;
+
+  .circle-wrapper {
+    gap: 15px;
   }
-  
-  strong {
-    color: #ffcc00;
+}
+
+@media (max-width: 768px) { /* Tablets and large mobile devices */
+  .portfolio-heading {
+    font-size: 1.8rem;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    p {
-      font-size: 1rem;
-    }
+
+  .description {
+    font-size: 1.4rem;
   }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 0.9rem;
-    }
+
+  .circle-item {
+    width: 140px;
+    height: 140px;
+    font-size: 0.8rem;
   }
-  
+
+  .circle-wrapper {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) { /* Mobile devices */
+  .portfolio-heading {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1.rem;
+  }
+
+  .circle-item {
+    width: 140px;
+    height: 140px;
+    font-size: 0.7rem;
+    transition-delay: 0.2s; /* Increase delay for smooth transition */
+  }
+
+  .circle-item::after {
+    opacity: 1; /* Make the arrow visible on mobile */
+  }
+
+  .circle-wrapper {
+    flex-direction: column; /* Stack circles vertically */
+    gap: 15px;
+    align-items: center; /* Center the circles vertically */
+  }
+}
+
+.circle-item strong {
+  font-size: 1.2rem; /* Increased font size */
+  margin-top: 5px;
+  color: #fff; /* Optional: Ensure text color stands out */
+}

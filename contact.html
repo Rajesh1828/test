@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="Styles.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   
+
   
 </script>
 
@@ -30,140 +32,116 @@
           <li><a href="About.html">About</a></li>
           <li><a href="Services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="clients.html">Clients</a></li>
+          <li><a href="career.html">Careers</a></li>
+          <!-- <li><a href="clients.html">Clients</a></li> -->
           <li><a href="contact.html">Contact</a></li>
+          
         </ul>
       </div>
     </nav>
 
-
-    <div class="contact-page">
-        <div class="contact-info">
-          <div class="contact-heading">
-            <h1>Contact <span>us</span></h1>
-            <p>Brodipet,4/13 <br>Psr institute 2nd floor<br>Guntur</p>
-          </div>
-          <div class="locations">
-            <div class="location">
-              <h2 style="text-shadow: none;">Guntur  City</h2>
-              <p><a href="#"> <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="icon"></a><br><br>dadtheadbbmm@gamil.com<br>9398392938</p>
-              <!-- <p><strong>""</strong><br>""<br>dadtheadbbmm@gamil.com</p> -->
+    <div class="responsive-container-21" style="margin-top: 50px;">
+      <img src="/images/2.png" alt="Lion wearing glasses" class="responsive-image-21">
+      <div class="main-container">
+        <div class="container">
+            <div class="contact-info">
+                <h2>Contact Info</h2>
+                <p><strong>Address:</strong> Guntur, Brodipet 4/13, Guntur-522002, Andhra Pradesh, India</p>
+                <p><strong>Email:</strong> dadtheadbbmm@gmail.com</p>
+                <p><strong>Phone:</strong> +91 9398392938</p>
+                <div class="socials">
+                    <p>Follow us:</p>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
             </div>
-            <div class="location">
-          
-              <iframe 
-        
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.350930255412!2d80.4324581!3d16.3043987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35bcb5db354605%3A0x4b1f35473f5d3060!2sGuntur%2C%20Andhra%20Pradesh%2C%20India!5e0!3m2!1sen!2sus!4v1672834449078!5m2!1sen!2sus" 
-              width="300" 
-              height="250" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy">
-            </iframe>
-            
-              </iframe>
-            </div>
-            
-          </div>
+    
+            <form class="contact-form" id="contact-form" action="" method="post">
+                <h2>Send a Message</h2>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
+    
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+    
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+    
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" name="mobile" id="mobile" placeholder="Mobile Number" required>
+    
+                <label for="message">Message</label>
+                <textarea name="message" id="message" placeholder="Write your message here..." required></textarea>
+    
+                <button type="submit">Send</button>
+            </form>
         </div>
-      </div>
-
-
-  
-      <div class="contact-container">
-       
-        <div class="contact-form-section">
-          <form id="contactForm" action="mail.php" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="firstName">First Name*</label>
-                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name*</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="company">Company*</label>
-              <input type="text" id="company" name="company" placeholder="Company" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="Phone">
-            </div>
-            <div class="form-group">
-              <label for="email">Work Email*</label>
-              <input type="email" id="email" name="email" placeholder="Work Email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message*</label>
-              <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-            </div>
-            <div class="recaptcha">
-              <div class="g-recaptcha" data-sitekey="your-site-key"></div>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-          </form>
-        </div>
-      </div>
+    </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Initialize EmailJS with your User ID
+        emailjs.init("eqZkzpAmzzH5M2Jwz");  // Replace with your User ID
 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-      <!-- Footer -->
-<!-- Footer Section -->
-<footer id="footer">
-  <div class="inner">
-    <ul class="icons">
-      <!-- Twitter -->
-      <li>
-        <a href="https://x.com/DadtheAD" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;">
-            <span class="label">Twitter</span>
-        </a>
-    </li>
+    // Collect form data
+    const firstName = document.querySelector('input[name="first_name"]').value;
+    const lastName = document.querySelector('input[name="last_name"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const mobile = document.querySelector('input[name="mobile"]').value;
+    const message = document.querySelector('textarea[name="message"]').value;
+
+    // Send the form data to EmailJS using your Service ID and Template ID
+    const templateParams = {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        mobile: mobile,
+        message: message
+    };
+
+    emailjs.send("service_43am1fd", "template_4uk183q", templateParams)
+        .then(function(response) {
+            console.log('Email sent successfully:', response);
+            alert("Your message has been sent successfully!");
+        }, function(error) {
+            console.error('Error sending email:', error);
+            alert("There was an error sending your message. Please try again later.");
+        });
+});
+
+    </script>
     
-
-      <!-- Facebook -->
-      <li>
-        <a href="" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" alt="Twitter Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;">
-            <span class="label">Twitter</span>
-        </a>
-    </li>
     
-
-      <!-- Instagram (Fixed tag) -->
-      <li>
-        <a href="https://www.instagram.com/dad_thefisherman/?__pwa=1" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Twitter Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;">
-            <span class="label">Twitter</span>
-        </a>
-    </li>
+     <!-- Footer Section -->
+     <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <!-- Twitter -->
+          <li>
+            <a href="" target="_blank"> <i class="fa-brands fa-twitter" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">Twitter</span> </a>
+          </li>
     
-      <!-- WhatsApp -->
-      <li>
-        <a href="https://x.com/DadtheAD" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Twitter Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;">
-            <span class="label">Twitter</span>
-        </a>
-    </li>
+          <!-- Facebook -->
+          <li>
+            <a href="https://x.com/DadtheAD" target="_blank"> <i class="fa-brands fa-facebook" style="font-size: 30px; margin-right: 5px;"></i> <span class="label">Facebook</span> </a>
+          </li>
     
-
-      <!-- LinkedIn -->
-      <li>
-        <a href="https://x.com/DadtheAD" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="Twitter Logo" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;">
-            <span class="label">Twitter</span>
-        </a>
-    </li>
-    
-    </ul>
-
+          <!-- Instagram -->
+          <li>
+            <a href="https://x.com/DadtheAD" target="_blank">   <i class="fa-brands fa-instagram" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">Instagram</span>  </a>      
+          </li>
+          <!-- LinkedIn -->
+          <li>
+            <a href="https://x.com/DadtheAD" target="_blank">    <i class="fa-brands fa-linkedin" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">LinkedIn</span> </a>
+          </li>
+        </ul>
     <!-- Copyright Section -->
     <ul class="copyright">
-      <li>&copy; Dad TheAd</li>
-      <li>All Rights Reserved <a href="https://html5up.net"></a></li>
+      <li>&copy; Dad TheAd</li> <li>All Rights Reserved <a href="https://html5up.net"></a></li>
     </ul>
   </div>
 </footer>

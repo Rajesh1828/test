@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Branding</title>
+  <link rel="icon" type="image/png" href="/3.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="japalilm.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/index.html"><img src="/3.png" alt="Logo"></a>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links">
+      <li><a href="#images">Images</a></li>
+      <li><a href="#logos">Logos</a></li>
+      <li><a href="#videos">Videos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Full-screen Overlay -->
+  <div class="full-screen-overlay" id="fullScreenOverlay" style="width: 100%; height: 70px;">
+    <button class="close-btn" onclick="closeFullScreen()">×</button>
+    <button class="prev-btn" onclick="changeImage(-1)">&#10094;</button>
+    <div id="fullScreenContent"></div>
+    <button class="next-btn" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <!-- Main Content -->
+  <div class="page-container learn-more-content hidden">
+    <!-- Images Section -->
+    <div id="images" class="gallery-section">
+      <header>
+        <h1>Images</h1>
+      </header>
+      <div class="gallery">
+        <img src="/images/SSM_1 (1)_page-0001.jpg" alt="Image 1" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0003.jpg" alt="Image 2" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0004.jpg" alt="Image 3" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0005.jpg" alt="Image 4" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0006.jpg" alt="Image 5" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0008.jpg" alt="Image 6" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0007.jpg" alt="Image 7" onclick="openFullScreen(this)">
+        <img src="/images/SSM_1 (1)_page-0002.jpg" alt="Image 8" onclick="openFullScreen(this)">
+      </div>
+    </div>
+
+    <!-- Logos Section -->
+    <div id="logos" class="gallery-section">
+      <header>
+        <h1>Logos</h1>
+      </header>
+      <div class="gallery">
+        <img src="/images/oc.png" alt="Logo 1" onclick="openFullScreen(this)">
+        <img src="/images/oc.png" alt="Logo 2" onclick="openFullScreen(this)">
+      </div>
+    </div>
+
+    <!-- Videos Section -->
+    <div id="videos" class="gallery-section">
+      <header>
+        <h1>Videos</h1>
+      </header>
+      <div class="gallery">
+        <video src="/images/hero.mp4" controls onclick="openFullScreen(this)"></video>
+        <video src="/images/hero.mp4" controls onclick="openFullScreen(this)"></video>
+      </div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="/Branding.html" class="back-btn" onclick="showMainPage()">Back</a>
+  </div>
+
+  <script>
+    let currentIndex = -1;
+    let currentElement = null;
+
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+
+    function openFullScreen(element) {
+      const fullScreenOverlay = document.getElementById('fullScreenOverlay');
+      const fullScreenContent = document.getElementById('fullScreenContent');
+      
+      // Clear previous content
+      fullScreenContent.innerHTML = '';
+
+      // Save the current element and its index
+      const allElements = document.querySelectorAll('.gallery img, .gallery video');
+      currentElement = element;
+      currentIndex = Array.from(allElements).indexOf(element);
+
+      // Clone the selected element and display it in full screen
+      if (element.tagName.toLowerCase() === 'img') {
+        const imgClone = element.cloneNode();
+        fullScreenContent.appendChild(imgClone);
+      } else if (element.tagName.toLowerCase() === 'video') {
+        const videoClone = element.cloneNode();
+        fullScreenContent.appendChild(videoClone);
+      }
+
+      // Show the full-screen overlay
+      fullScreenOverlay.style.display = 'flex';
+      
+      // Add a class to stop background scrolling
+      document.body.classList.add('full-screen-active');
+    }
+
+    function closeFullScreen() {
+      const fullScreenOverlay = document.getElementById('fullScreenOverlay');
+      fullScreenOverlay.style.display = 'none';
+      document.body.classList.remove('full-screen-active');
+    }
+
+    function changeImage(direction) {
+      const allElements = document.querySelectorAll('.gallery img, .gallery video');
+
+      // Calculate the new index
+      currentIndex = (currentIndex + direction + allElements.length) % allElements.length;
+      currentElement = allElements[currentIndex];
+
+      const fullScreenContent = document.getElementById('fullScreenContent');
+      fullScreenContent.innerHTML = '';
+
+      // Clone the new element and display it in full screen
+      if (currentElement.tagName.toLowerCase() === 'img') {
+        const imgClone = currentElement.cloneNode();
+        fullScreenContent.appendChild(imgClone);
+      } else if (currentElement.tagName.toLowerCase() === 'video') {
+        const videoClone = currentElement.cloneNode();
+        fullScreenContent.appendChild(videoClone);
+      }
+    }
+
+    function showLearnMore() {
+      document.querySelector('.main-page').classList.add('hidden');
+      document.querySelector('.learn-more-content').classList.remove('hidden');
+    }
+
+    function showMainPage() {
+      document.querySelector('.learn-more-content').classList.add('hidden');
+      document.querySelector('.main-page').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

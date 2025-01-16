@@ -1,263 +1,118 @@
-.hero-section {
-    position: relative;
-    background: url('/images/portfoliobg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-.hero-section h3{
-  color: goldenrod;
+.image-container {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #ffe100;
-    margin-bottom: 20px;
-}
-
-.hero-content h2 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: aliceblue;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
+.responsive-image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 
 /* Services Section-cards *-------------------/
 
 /* Cards container */
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px; /* Space between the cards */
-    background: url('background-image.jpg') no-repeat center center/cover;
-    background-color:  rgba(2, 2, 2, 0.6);;
-    width: 100%;
-    height: 80%;
-  }
-  
-  /* Card styles */
-  .card {
-    width: calc(25% - 20px); /* 4 cards per row with gap */
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px); /* Hover effect */
-  }
-  
-  /* Image inside the card */
-  .card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  /* Content inside the card */
-  .card-content {
-    padding: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.25em;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card-description {
-    font-size: 1em;
-    color: #555;
-  }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 1024px) {
-    .card {
-      width: calc(50% - 20px); /* 2 cards per row for medium screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .card {
-      width: 100%; /* 1 card per row for small screens */
-    }
-  }
-  
-  /* Contact Section Styles */
-.contact-section {
-  padding: 50px 20px;
-  background-color: #ffffff;
-}
-
-.container-contact {
+.card-section {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 30px;
-}
-
-/* Left Side: Form Container */
-.form-container {
-  flex: 1;
-  min-width: 300px;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h2 {
-  margin-bottom: 20px;
-  font-size: 1.8rem;
-  color: #007bff;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  color: #495057;
-}
-
-.form-group input,
-.form-group textarea {
+  background: url("");
   width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ced4da;
-  border-radius: 5px;
-  outline: none;
-  transition: border-color 0.3s;
+  height: auto;
+  position: relative; 
+  margin-inline-end: 160px;
+  /* Allows absolute positioning for child elements */
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #007bff;
-}
-
-textarea {
-  resize: none;
-}
-
-.btn-submit {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-submit:hover {
-  background-color: #0056b3;
-}
-
-/* Right Side: Information Container */
-.info-container {
-  flex: 1;
-  min-width: 300px;
+.card {
+  background-color: #FFA500; /* Orange background */
+  color: white;
   padding: 20px;
+  border-radius: 0px;
+  width: calc(33.33% - 40px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transform: translateY(50px); /* Default transition state */
+  opacity: 0; /* Hidden initially */
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out; /* Scroll effect */
+  position: relative; /* Keeps positioning scoped within the card section */
+  z-index: 1; /* Stacks cards on top of the background image */
 }
 
-.info-container h2 {
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  color: #007bff;
+/* Different Heights for Each Card */
+.card:nth-child(1) {
+  height: 700px; /* Adjust height for Strategy card */
+  margin-bottom: 200px; /* Increased bottom margin */
+  position: relative;
+  z-index: 10; /* Overlap on the image */
 }
 
-.info-container p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #495057;
+.card:nth-child(2) {
+  height: 550px; /* Adjust height for Tools card */
+  margin-top: 100px;
+}
+
+.card:nth-child(3) {
+  height: 700px; /* Adjust height for Performance card */
+  margin-bottom: 150px; /* Increased bottom margin */
+  position: relative;
+  z-index: 2; /* Overlap on the image */
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+}
+
+.card p {
+  font-size: 1.3rem;
+  color: #1c1c1b;
+  margin: 10px 0 20px;
+}
+
+.card ul {
+  list-style-type: square;
+  
+  padding: 0;
+}
+
+.card ul li {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .container-contact {
-      flex-direction: column;
-  }
-
-  .form-container,
-  .info-container {
-      min-width: 100%;
+  .card {
+    width: calc(50% - 40px);
   }
 }
 
 @media (max-width: 480px) {
-  .form-container h2,
-  .info-container h2 {
-      font-size: 1.5rem;
-  }
-
-  .form-group label,
-  .info-container p {
-      font-size: 0.9rem;
-  }
-
-  .btn-submit {
-      font-size: 0.9rem;
-      padding: 8px 16px;
+  .card {
+    width: 100%;
+    height: auto; /* Ensure height adjusts dynamically for smaller screens */
+    margin-bottom: 20px; /* Adjust bottom margin for smaller screens */
   }
 }
