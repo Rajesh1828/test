@@ -24,7 +24,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 
   <style>
-    /* Styles for Logos Section */
 /* Styles for Logos Section */
 .logos-section {
   margin: 0;
@@ -41,19 +40,18 @@
 }
 
 .logos-container {
-  display: flex;
-  /* flex-wrap: wrap; */
-  grid-template-columns: repeat(2, 1fr); 
-  justify-content: center;
-  align-items: center;  /* Align logos in center vertically */
+  display: grid;  /* Use grid layout */
+  grid-template-columns: repeat(5, 1fr);  /* 2 columns by default */
+  grid-template-rows: repeat(2, auto);  /* 5 rows for laptop view */
   gap: 20px;
   width: 100%;  /* Ensure the container takes up full width */
+  justify-items: center;  /* Center logos horizontally */
 }
 
 .logo-item {
   display: block;
-  width: 200px;
-  height: 100px;
+  width: 100%;  /* Make logo items flexible */
+  height: auto;
   text-align: center;
   overflow: hidden;  /* Prevents overflow of images */
   transition: transform 0.3s ease-in-out;
@@ -69,8 +67,24 @@
   transform: scale(1.1);
 }
 
+/* Tablet/Small Laptop View: 2 Columns */
+@media (max-width: 1024px) {
+  .logos-container {
+    grid-template-columns: repeat(5, 1fr);  /* 2 columns on small laptops/tablets */
+    grid-template-rows: repeat(2, auto);  /* 5 rows */
+  }
+  .logo-item {
+    width: 150px;  /* Adjust size on tablets/laptops */
+    height: 75px;
+  }
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
+  .logos-container {
+    grid-template-columns: repeat(5, 1fr);  /* 2 columns on tablets */
+  }
+
   .logo-item {
     width: 150px;  /* Adjust size on tablet */
     height: 75px;
@@ -78,18 +92,15 @@
 }
 
 @media (max-width: 480px) {
+  .logos-container {
+    grid-template-columns: 1fr;  /* 1 column on small screens (stack logos) */
+  }
+
   .logo-item {
     width: 120px;  /* Adjust size for small screens */
     height: 60px;
   }
-
-  /* Stack logos vertically on small screens */
-  .logos-container {
-    flex-direction: column;
-    align-items: center;
-  }
 }
-
 
   </style>
 </head>
