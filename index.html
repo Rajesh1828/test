@@ -22,6 +22,76 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Styles for Logos Section */
+/* Styles for Logos Section */
+.logos-section {
+  margin: 0;
+  padding: 20px 10px;  /* Add padding to prevent logos from touching edges */
+  width: 100%;
+  background-color: #f9f9f9;  /* Optional background color */
+}
+
+.heading h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;  /* Optional color */
+}
+
+.logos-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(2, 1fr); 
+  justify-content: center;
+  align-items: center;  /* Align logos in center vertically */
+  gap: 20px;
+  width: 100%;  /* Ensure the container takes up full width */
+}
+
+.logo-item {
+  display: block;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  overflow: hidden;  /* Prevents overflow of images */
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo-item img {
+  width: 100%;  /* Ensure images stretch to fill the logo item */
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: contain;  /* Preserve image aspect ratio */
+}
+
+.logo-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .logo-item {
+    width: 150px;  /* Adjust size on tablet */
+    height: 75px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-item {
+    width: 120px;  /* Adjust size for small screens */
+    height: 60px;
+  }
+
+  /* Stack logos vertically on small screens */
+  .logos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+  </style>
 </head>
 <body>
   <nav>
@@ -190,37 +260,37 @@
     <h1>Our Clients</h1>
   </div>
   <div class="logos-container">
-    <a href="#logo1" class="logo-item" data-logo-name="MEER'sHUB" style="display: block; width: 200px; height: 100px;">
+    <a href="#logo1" class="logo-item" data-logo-name="MEER'sHUB" >
       <img src="/client-logos/Meer's hub.png" alt="Suzuki">
     </a>
-    <a href="#logo2" class="logo-item" data-logo-name="AmruthaHospital"  style="display: block; width: 200px; height: 100px;">
+    <a href="#logo2" class="logo-item" data-logo-name="AmruthaHospital" >
       <img src="/client-logos/AH.png" alt="Amrutha Hospital">
     </a>
-    <a href="#logo3" class="logo-item" data-logo-name="Nyla"  style="display: block; width: 170px; height: 170px;">
+    <a href="#logo3" class="logo-item" data-logo-name="Nyla"  >
       <img src="/client-logos/Nyla (1).png" alt="AMISTA">
     </a>
     <!-- <a href="#logo4" class="logo-item" data-logo-name="magadha"  style="display: block; width: 100px; height: 100px;">
       <img src="/client-logos/magadha.png" alt="Bourassa">
     </a> -->
-    <a href="#logo5" class="logo-item" data-logo-name="global Diagnosis"  style="display: block; width: 200px; height: 200px; padding-top: 10px;">
+    <a href="#logo5" class="logo-item" data-logo-name="global Diagnosis" >
       <img src="/client-logos/global.png" alt="Broan">
     </a>
-    <a href="#logo6" class="logo-item" data-logo-name="sulthana Diagnosis"  style="display: block; width: 200px; height: 200px; padding-top: 10px;">
+    <a href="#logo6" class="logo-item" data-logo-name="sulthana Diagnosis" >
       <img src="/client-logos/Sulthan diagnostics.png" alt="QSL">
     </a>
-    <a href="#logo7" class="logo-item" data-logo-name="3SIX5"  style="display: block; width: 200px; height: 200px; padding-top: 30px;">
+    <a href="#logo7" class="logo-item" data-logo-name="3SIX5" >
       <img src="/client-logos/news.png" alt="Stelpro">
     </a>
-    <a href="#logo8" class="logo-item" data-logo-name="medilight " style="display: block; width: 200px; height: 200px; padding-top: 30px; ">
+    <a href="#logo8" class="logo-item" data-logo-name="medilight " >
       <img src="/client-logos/medilight.png" alt="Umbrella">
     </a>
     <a href="#logo9" class="logo-item" data-logo-name="JAPALI">
       <img src="/client-logos/Japali Logo.png" alt="Canam">
     </a>
-    <a href="#logo10" class="logo-item" data-logo-name="eluri Hospital" style="display: block; width: 200px; height: 200px; padding-top: 20px;">
+    <a href="#logo10" class="logo-item" data-logo-name="eluri Hospital">
       <img src="/client-logos/eluri.png" alt="PG Solutions">
     </a>
-    <a href="#logo10" class="logo-item" data-logo-name="Suzuki" style="padding-bottom: 40px;" >
+    <a href="#logo10" class="logo-item" data-logo-name="Suzuki" >
       <img src="/client-logos/Suzuki-Logo.wine.svg" alt="PG Solutions">
     </a>
   </div>
