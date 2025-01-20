@@ -1,13 +1,236 @@
 <!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <title>Dad theAd</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="Services.css">
+    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="icon" type="" href="3.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  </head>
+  <body >
+    <nav>
+      <div class="logo">
+        <a href="/"><img src="3.png" alt="Logo"></a>
+      </div>
+      <div class="menu-btn">
+        <!-- <i class="fas fa-bars" id="open-menu"></i> -->
+        <i class="fa-solid fa-bars" id="open-menu"></i>
+      </div>
+      <div class="menu" id="menu">
+        <i class="fas fa-times" id="close-menu"></i>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <!-- <li><a href="clients.html">Clients</a></li> -->
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="career.html">Careers</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero-section">
+     
+      <div class="hero-overlay">
+        
+      </div>
+      <div class="image-container">
+        <img src="/images/mks.jpeg" alt="Fisher Man" class="responsive-image">
+    </div>
+    <div class="card-section">
+      <div class="card" style="margin-top: -80px;">
+        
+          <p>
+       
+          </p>
+          <ul style="margin-top:200px;">
+              <li>Marketing Plan</li>
+              <li>Personas</li>
+              <li>Messaging and Contents</li>
+              
+              <li>Content Marketing</li>
+              <li>Social Media Marketing</li>
+              
+          </ul>
+      </div>
+      <div class="card" style="margin-top: -30px;">
+      
+          <p>
+          </p>
+          <ul style="margin-top:170px;">
+              <li>Branding </li>
+              <li>Website Design</li>
+              <li>Product Launch</li>
+              <li>Other Tools</li>
+              <li> Focus on Mobile Marketing</li>
+          </ul>
+      </div>
+      <div class="card" style="margin-top: -80px;">
+          
+          <p>
+          </p>
+          <ul style="margin-top:200px;">
+              <li>Visibility on Google</li>
+              <li>Keyword Purchases</li>
+              <li>Social Media</li>
+              <li>Performance Tracking</li>
+              <li>Search Engine Optimization (SEO)</li>
+          </ul>
+      </div>
+  </div>
+  <script src="script.js"></script>
+
+ <!-- Contact -->
+ <!-- <div class="container3" >
+  <div class="content3">
+    <div class="icon-container">
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+            <h1>Where to Start?</h1>
+    <h2>With Non-Binding Support</h2>
+    <h3>
+      "Many of our customers know their destination but are unsure of the path to take. Let us help you craft a roadmap to success."
+
+    </h3>
+    <button onclick="window.open('contact.html', '_blank')">Request a Diagnosis</button>
+  </div>
+</div> -->
+<!-- Footer -->
+<footer id="footer">
+  <div class="inner">
+    <ul class="icons">
+      <!-- Twitter -->
+      <li>
+        <a href="https://x.com/DadtheAD" target="_blank"> <i class="fa-brands fa-twitter" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">Twitter</span> </a>
+      </li>
+      <!-- Facebook -->
+      <li>
+        <a href="https://www.facebook.com/profile.php?id=61570862415128" target="_blank"> <i class="fa-brands fa-facebook" style="font-size: 30px; margin-right: 5px;"></i> <span class="label">Facebook</span> </a>
+      </li>
+      <!-- Instagram -->
+      <li>
+        <a href="https://www.instagram.com/dad_thefisherman/?fbclid=IwZXh0bgNhZW0CMTEAAR2zj9PzQkg9mrD6belyqpYhaqWDJhzGhY9CrvFo735KOT-fcJzSGn8pKeU_aem_MgbVntF4nK-2wIwp-QTLvA" target="_blank">   <i class="fa-brands fa-instagram" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">Instagram</span>  </a>      
+      </li>
+      <!-- LinkedIn -->
+      <li>
+        <a href="https://www.linkedin.com/company/105601801/admin/dashboard/" target="_blank">    <i class="fa-brands fa-linkedin" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">LinkedIn</span> </a>
+      </li>
+    </ul>
+
+    <!-- Copyright Section -->
+    <ul class="copyright">
+      <li>&copy; Dad TheAd</li>
+      <li>All Rights Reserved <a href="https://html5up.net"></a></li>
+    </ul>
+  </div>
+</footer>
+<script src="script.js"></script>
+
+</div>
+
+<!-- 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your User ID
+  emailjs.init("VLns4-XYqhzLefF-F");
+
+  // Form submission handler
+  document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent page refresh
+
+    // Collect form data
+    const formData = {
+      name: document.getElementById('name').value,
+      number: document.getElementById('number').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value,
+    };
+
+    // Send email via EmailJS
+    emailjs
+      .send('service_q559xjr', 'template_8bpord3', formData)
+      .then(
+        function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+        },
+        function (error) {
+          console.error('FAILED...', error);
+          alert('Failed to send message. Please try again.');
+        }
+      );
+  });
+</script>
+ -->
+<script>
+
+
+// Adding scroll-based animations
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+
+    const revealCards = () => {
+        cards.forEach((card, index) => {
+            const cardTop = card.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (cardTop < windowHeight - 100) {
+                card.style.transform = 'translateY(0)';
+                card.style.opacity = '1';
+                card.style.transitionDelay = `${index * 0.2}s`; // Staggered animation
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealCards);
+    revealCards(); // Initial check
+});
+
+  // Adding scroll-based animations
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card');
+
+    const revealCards = () => {
+        cards.forEach((card, index) => {
+            const cardTop = card.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (cardTop < windowHeight - 100) {
+                card.style.transform = 'translateY(0)';
+                card.style.opacity = '1';
+                card.style.transitionDelay = `${index * 0.2}s`; // Staggered animation
+            }
+        });
+    };
+
+    window.addEventListener('scroll', revealCards);
+    revealCards(); // Initial check
+});
+
+</script>
+
+    </body>
+</html>
+    
+   
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
   <title>Dad theAd</title>
   <link rel="stylesheet" href="Styles.css">
   <link rel="stylesheet" href="/siglepages css/marketingstratagies.css">
-  <head>
+  <head> -->
     <!-- Font Awesome CDN link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
  
 
   
@@ -20,9 +243,9 @@
     <div class="logo">
       <a href="/"><img src="3.png" alt="Logo"></a>
     </div>
-    <div class="menu-btn">
+    <div class="menu-btn"> -->
       <!-- <i class="fas fa-bars" id="open-menu"></i> -->
-      <i class="fa-solid fa-bars" id="open-menu"></i>
+      <!-- <i class="fa-solid fa-bars" id="open-menu"></i>
     </div>
     <div class="menu" id="menu">
       <i class="fas fa-times" id="close-menu"></i>
@@ -30,26 +253,26 @@
         <li><a href="/">Home</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="Services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li> -->
         <!-- <li><a href="clients.html">Clients</a></li> -->
-        <li><a href="contact.html">Contact</a></li>
+        <!-- <li><a href="contact.html">Contact</a></li>
         <li><a href="career.html">Careers</a></li>
       </ul>
     </div>
   </nav>
 
 
-  <div class="page-container--4">
+  <div class="page-container--4"> -->
     <!-- Header Section -->
-    <header class="header-section--4">
+    <!-- <header class="header-section--4">
       <h1>welcome to Marketing-Strategies</h1>
-    </header>
+    </header> -->
   
     <!-- User Cards Section -->
-    <div class="user-cards--4">
+ <!-- / -->
       
       <!-- Card 1 -->
-      <div class="card--4">
+      <!-- <div class="card--4">
         <div class="profile-img--4">
           <img src="/client-logos/Japali Logo.png" alt="Japali">
         </div>
@@ -57,10 +280,10 @@
         <small> Marketing-Strategies</small>
         <h3>About Me</h3>
         <a href="" class="learn-more--4">Learn More</a>
-      </div>
+      </div> -->
   
       <!-- Card 2 -->
-      <div class="card--4">
+      <!-- <div class="card--4">
         <div class="profile-img--4">
           <img src="/client-logos/Nyla (1).png" alt="Nyla">
         </div>
@@ -68,10 +291,10 @@
         <small> Marketing-Strategies</small>
         <h3>About Me</h3>
         <a href="#" class="learn-more--4">Learn More</a>
-      </div>
+      </div> -->
   
       <!-- Card 3 -->
-      <div class="card--4">
+      <!-- <div class="card--4">
         <div class="profile-img--4">
           <img src="/client-logos/Meer's hub.png" alt="Meer's hub">
         </div>
@@ -80,9 +303,9 @@
         <h3>About Me</h3>
         <a href="#" class="learn-more--4">Learn More</a>
       </div>
-  
+   -->
       <!-- Card 4 -->
-      <div class="card--4">
+      <!-- <div class="card--4">
         <div class="profile-img--4">
           <img src="/client-logos/EthosDEntal.jpg" alt="Ethos Dental">
         </div>
@@ -93,31 +316,31 @@
       </div>
     </div>
   </div>
-  
-  <footer id="footer">
+   -->
+  <!-- <footer id="footer">
     <div class="inner">
-      <ul class="icons">
+      <ul class="icons"> -->
         <!-- Twitter -->
-        <li>
+        <!-- <li>
           <a href="" target="_blank"> <i class="fa-brands fa-twitter" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">Twitter</span> </a>
         </li>
-  
+   -->
         <!-- Facebook -->
-        <li>
+        <!-- <li>
           <a href="https://x.com/DadtheAD" target="_blank"> <i class="fa-brands fa-facebook" style="font-size: 30px; margin-right: 5px;"></i> <span class="label">Facebook</span> </a>
         </li>
-  
+   -->
         <!-- Instagram -->
-        <li>
+        <!-- <li>
           <a href="https://x.com/DadtheAD" target="_blank">   <i class="fa-brands fa-instagram" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">Instagram</span>  </a>      
-        </li>
+        </li> -->
         <!-- LinkedIn -->
-        <li>
+        <!-- <li>
           <a href="https://x.com/DadtheAD" target="_blank">    <i class="fa-brands fa-linkedin" style="font-size: 30px; margin-right: 5px;"></i>  <span class="label">LinkedIn</span> </a>
         </li>
-      </ul>
+      </ul> -->
          <!-- Copyright Section -->
-    <ul class="copyright">
+    <!-- <ul class="copyright">
       <li>&copy; Dad TheAd</li>
       <li>All Rights Reserved <a href="https://html5up.net"></a></li>
     </ul>
@@ -126,4 +349,4 @@
   
   <script src="script.js"></script>
 </body>
-</html
+</html -->

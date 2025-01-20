@@ -768,7 +768,7 @@ nav {
 /* Logos Container */
 .logos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Default for larger screens */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Default for larger screens */
   gap: 20px;
   width: 100%; /* Full width */
   max-width: 1200px; /* Limit the width for large screens */
@@ -836,7 +836,7 @@ nav {
 /* Large Screens (Desktops) */
 @media (min-width: 1024px) {
   .logos-container {
-    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    grid-template-columns: repeat(5, 1fr); /* 6 columns */
   }
 }
 

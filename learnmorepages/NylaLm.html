@@ -4,31 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Branding</title>
-  <link rel="icon" type="image/png" href="./3.png">
+  <link rel="icon" type="image/png" href="/3.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="japalilm.css">
+
+
+
+  <style>
+    /* Container with gradient background */
+    .responsive-container-223 { 
+      max-width: 100%; /* Full width of the viewport */
+      overflow: hidden; /* Hide any overflowing content */
+      background: linear-gradient(45deg, #787878, #000000); /* Gradient background */
+      padding: 10px; /* Optional: Add padding for spacing */
+      border-radius: 8px; /* Optional: Add rounded corners */
+    }
+
+    /* Responsive image styling */
+    .responsive-image-223 { 
+      width: 100%; /* Scale image to fit the container width */
+      height: auto; /* Maintain aspect ratio */
+      display: block; /* Removes inline image gaps */
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <a href="/index.html"><img src="./3.png" alt="Logo"></a>
+      <a href="/index.html"><img src="/3.png" alt="Logo"></a>
     </div>
     <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Navigation Menu">☰</button>
     <ul class="nav-links">
       <li><a href="#images">Images</a></li>
-      <li><a href="#logos">Logos</a></li>
-      <li><a href="#videos">Videos</a></li>
+      <!-- <li><a href="#logos">Logos</a></li>
+      <li><a href="#videos">Videos</a></li> -->
     </ul>
   </nav>
 
   <!-- Full-screen Overlay -->
-  <div class="full-screen-overlay" id="fullScreenOverlay" style="display: none;">
+  <!-- <div class="full-screen-overlay" id="fullScreenOverlay" style="display: none;">
     <button class="close-btn" onclick="closeFullScreen()" aria-label="Close Full Screen">×</button>
     <button class="prev-btn" onclick="changeImage(-1)" aria-label="Previous Content">&#10094;</button>
     <div id="fullScreenContent"></div>
     <button class="next-btn" onclick="changeImage(1)" aria-label="Next Content">&#10095;</button>
-  </div>
+  </div> -->
 
   <!-- Main Content -->
   <div class="page-container learn-more-content hidden">
@@ -37,16 +57,30 @@
       <header>
         <h1>Images</h1>
       </header>
-      <div class="gallery">
+
+
+
+      <div class="responsive-container-223"> 
+        <img src="/brandguide images/nyla1.jpeg" alt="Lion wearing glasses" class="responsive-image-223">
+      </div>
+      <div class="responsive-container-223"> 
+        <img src="/brandguide images/nyla2.jpeg" alt="Lion wearing glasses" class="responsive-image-223">
+      </div>
+      <div class="responsive-container-223"> 
+        <img src="/brandguide images/nyla3.jpeg" alt="Lion wearing glasses" class="responsive-image-223">
+      </div>
+
+
+      <!-- <div class="gallery">
         <img src="./images/SSM_1_page-0001.jpg" alt="Sample Image 1" onclick="openFullScreen(this)">
         <img src="./images/SSM_1_page-0003.jpg" alt="Sample Image 2" onclick="openFullScreen(this)">
-        <img src="./images/SSM_1_page-0004.jpg" alt="Sample Image 3" onclick="openFullScreen(this)">
+        <img src="./images/SSM_1_page-0004.jpg" alt="Sample Image 3" onclick="openFullScreen(this)"> -->
         <!-- Add more images as needed -->
-      </div>
-    </div>
+      <!-- </div>
+    </div> -->
 
     <!-- Logos Section -->
-    <div id="logos" class="gallery-section">
+    <!-- <div id="logos" class="gallery-section">
       <header>
         <h1>Logos</h1>
       </header>
@@ -54,10 +88,10 @@
         <img src="./images/oc.png" alt="Logo Example 1" onclick="openFullScreen(this)">
         <img src="./images/oc.png" alt="Logo Example 2" onclick="openFullScreen(this)">
       </div>
-    </div>
+    </div> -->
 
     <!-- Videos Section -->
-    <div id="videos" class="gallery-section">
+    <!-- <div id="videos" class="gallery-section">
       <header>
         <h1>Videos</h1>
       </header>
@@ -65,13 +99,13 @@
         <video src="./images/hero.mp4" controls onclick="openFullScreen(this)" alt="Sample Video 1"></video>
         <video src="./images/hero.mp4" controls onclick="openFullScreen(this)" alt="Sample Video 2"></video>
       </div>
-    </div>
+    </div> -->
 
     <!-- Back Button -->
     <a href="/Branding.html" class="back-btn" onclick="showMainPage()">Back</a>
   </div>
 
-  <script>
+  <!-- <script>
     let currentIndex = -1;
     let currentElement = null;
 
@@ -125,6 +159,6 @@
     function showMainPage() {
       document.querySelector('.learn-more-content').classList.add('hidden');
     }
-  </script>
+  </script> -->
 </body>
 </html>
